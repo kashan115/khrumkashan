@@ -233,15 +233,9 @@
                 <p>Explore my open source projects and code contributions on GitHub:</p>
                 <p><a href="https://github.com/kashan115?tab=repositories" target="_blank">github.com/kashan115</a></p>
                 <div id="github-repo-list">
-                  <!-- Optionally, you can use JavaScript to fetch and display repos dynamically. -->
-                  <ul>
-                    <li><a href="https://github.com/kashan115/khrumkashan" target="_blank">khrumkashan</a></li>
-                    <li><a href="https://github.com/kashan115/azure-linux" target="_blank">azure-linux</a></li>
-                    <li><a href="https://github.com/kashan115/linux-automation" target="_blank">linux-automation</a></li>
-                    <li><a href="https://github.com/kashan115/azure-vm-tools" target="_blank">azure-vm-tools</a></li>
-                    <li><a href="https://github.com/kashan115/opensource-examples" target="_blank">opensource-examples</a></li>
+                  <ul id="repo-list">
+                    <li>Loading repositories...</li>
                   </ul>
-                  <p>...and more on my GitHub profile.</p>
                 </div>
               </div>
             </div>
@@ -344,5 +338,26 @@
 <script src="vendor/slick/slick.min.js"></script>
 <!-- Main JS -->
 <script src="js/script.js"></script>
+<script>
+// Dynamically fetch and display GitHub repos
+fetch('https://api.github.com/users/kashan115/repos?sort=updated')
+  .then(response => response.json())
+  .then(data => {
+    const repoList = document.getElementById('repo-list');
+    repoList.innerHTML = '';
+    data.slice(0, 10).forEach(repo => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - <span>${repo.description || ''}</span>`;
+      repoList.appendChild(li);
+    });
+    if (data.length === 0) {
+      repoList.innerHTML = '<li>No repositories found.</li>';
+    }
+  })
+  .catch(() => {
+    const repoList = document.getElementById('repo-list');
+    repoList.innerHTML = '<li>Unable to load repositories.</li>';
+  });
+</script>
 </body>
 </html>
