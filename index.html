@@ -85,39 +85,28 @@
   </div>
 </section>
 
-<!-- Book Summaries Section -->
-<section id="books" class="blog-single">
+<!-- About Section -->
+<section id="about" class="blog-single">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h2 class="text-center mb-5">Book Summaries</h2>
         <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Atomic Habits</h5>
-                <p class="card-text">A summary of James Clear's best-selling book on building good habits and breaking bad ones.</p>
-                <a href="#" class="btn btn-primary">Read Summary</a>
-              </div>
-            </div>
+          <div class="col-md-6">
+            <img src="images/about/profile.jpg" alt="Khrum Kashan" class="img-fluid rounded">
           </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Deep Work</h5>
-                <p class="card-text">Key insights from Cal Newport's guide to focused success in a distracted world.</p>
-                <a href="#" class="btn btn-primary">Read Summary</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">The Lean Startup</h5>
-                <p class="card-text">Highlights from Eric Ries' approach to building successful startups using lean principles.</p>
-                <a href="#" class="btn btn-primary">Read Summary</a>
-              </div>
-            </div>
+          <div class="col-md-6">
+            <h3>Hi, I'm Khrum Kashan.</h3>
+            <p>I'm an experienced Product Manager with over two decades of expertise in Linux platforms, cloud virtualization, and software quality management. Based in Seattle, I've successfully led initiatives focused on delivering high-quality solutions, particularly within cloud environments such as Microsoft Azure.</p>
+            <p>Throughout my career, I've specialized in product strategy, cross-functional team leadership, and driving technical innovation. I excel at managing complex projects and ensuring rigorous standards in reliability, security, and performance. My strength lies in effectively connecting technical teams and strategic stakeholders, resulting in significant improvements in Linux deployments and virtualization solutions.</p>
+            <p>At Microsoft Azure, I'm actively involved in enhancing Linux platform capabilities, optimizing virtualization technologies, and contributing to the open-source community. My collaborative approach has helped strengthen partnerships with global tech leaders, ISVs, and Linux distributions, significantly improving customer satisfaction and market success.</p>
+            <p>I'm passionate about engineering excellence, innovation, and maintaining high-quality standards. My proactive leadership style and deep technical knowledge have positioned me as a trusted advisor in product management circles. I'm committed to continuously advancing Linux and cloud virtualization technologies, delivering consistent value for customers and stakeholders.</p>
+            <p>My focus areas include:</p>
+            <ul>
+              <li>Product Management</li>
+              <li>AI & Technology Trends</li>
+              <li>Book Summaries</li>
+              <li>Technical Writing</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -152,29 +141,39 @@
   </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="blog-single">
+<!-- Book Summaries Section -->
+<section id="books" class="blog-single">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h2 class="text-center mb-5">About Me</h2>
+        <h2 class="text-center mb-5">Book Summaries</h2>
         <div class="row">
-          <div class="col-md-6">
-            <img src="images/about/profile.jpg" alt="Khrum Kashan" class="img-fluid rounded">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Atomic Habits</h5>
+                <p class="card-text">A summary of James Clear's best-selling book on building good habits and breaking bad ones.</p>
+                <a href="#" class="btn btn-primary">Read Summary</a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <h3>Hi, I'm Khrum Kashan.</h3>
-            <p>I'm an experienced Product Manager with over two decades of expertise in Linux platforms, cloud virtualization, and software quality management. Based in Seattle, I've successfully led initiatives focused on delivering high-quality solutions, particularly within cloud environments such as Microsoft Azure.</p>
-            <p>Throughout my career, I've specialized in product strategy, cross-functional team leadership, and driving technical innovation. I excel at managing complex projects and ensuring rigorous standards in reliability, security, and performance. My strength lies in effectively connecting technical teams and strategic stakeholders, resulting in significant improvements in Linux deployments and virtualization solutions.</p>
-            <p>At Microsoft Azure, I'm actively involved in enhancing Linux platform capabilities, optimizing virtualization technologies, and contributing to the open-source community. My collaborative approach has helped strengthen partnerships with global tech leaders, ISVs, and Linux distributions, significantly improving customer satisfaction and market success.</p>
-            <p>I'm passionate about engineering excellence, innovation, and maintaining high-quality standards. My proactive leadership style and deep technical knowledge have positioned me as a trusted advisor in product management circles. I'm committed to continuously advancing Linux and cloud virtualization technologies, delivering consistent value for customers and stakeholders.</p>
-            <p>My focus areas include:</p>
-            <ul>
-              <li>Product Management</li>
-              <li>AI & Technology Trends</li>
-              <li>Book Summaries</li>
-              <li>Technical Writing</li>
-            </ul>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Deep Work</h5>
+                <p class="card-text">Key insights from Cal Newport's guide to focused success in a distracted world.</p>
+                <a href="#" class="btn btn-primary">Read Summary</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">The Lean Startup</h5>
+                <p class="card-text">Highlights from Eric Ries' approach to building successful startups using lean principles.</p>
+                <a href="#" class="btn btn-primary">Read Summary</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -344,7 +343,7 @@ fetch('https://api.github.com/users/kashan115/repos?sort=updated')
   .then(data => {
     const repoList = document.getElementById('repo-list');
     repoList.innerHTML = '';
-    data.slice(0, 10).forEach(repo => {
+    data.slice(0, 5).forEach(repo => {
       const li = document.createElement('li');
       li.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - <span>${repo.description || ''}</span>`;
       repoList.appendChild(li);
