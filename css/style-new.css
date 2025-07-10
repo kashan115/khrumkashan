@@ -443,7 +443,143 @@ body {
   color: #000;
 }
 
-/* Responsive Design */
+/* Book Summaries Page Styles */
+.books-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.book-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.book-category {
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.book-date {
+  color: #999;
+  font-size: 0.875rem;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.book-author {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.book-summary {
+  line-height: 1.6;
+}
+
+.book-summary h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+}
+
+.book-summary ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.book-summary li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.book-summary li strong {
+  color: #2c3e50;
+}
+
+.reading-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.reading-item {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+}
+
+.reading-item h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.reading-author {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.reading-progress {
+  background: #3498db;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: #666;
+}
+
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
@@ -482,6 +618,24 @@ body {
   .modal-content {
     margin: 1rem auto;
     width: 95%;
+  }
+
+  .book-card {
+    padding: 1.5rem;
+  }
+  
+  .book-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .book-title {
+    font-size: 1.25rem;
+  }
+  
+  .reading-list {
+    grid-template-columns: 1fr;
   }
 }
 
