@@ -36,25 +36,22 @@
       <!-- Navigation Links -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#books">Book Summaries</a>
+          <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#blogs">AI Blogs</a>
+          <a class="nav-link" href="blogs.html">AI Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#adventures">Adventures</a>
+          <a class="nav-link" href="books.html">Book Summaries</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#github">GitHub Repos</a>
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="contact.html">Contact</a>
         </li>
       </ul>
       <!-- Social Links -->
@@ -75,37 +72,72 @@
 <!-- Navbar End -->
 
 <!-- Hero Section -->
-<section id="home" class="blog-single">
+<section id="home" class="hero-section">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <p class="lead">Principal Program Manager | AI Enthusiast | Adventurer</p>
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6">
+        <div class="hero-content">
+          <h1 class="display-4 fw-bold mb-4">Khrum Kashan</h1>
+          <p class="lead mb-4">Principal Program Manager | AI Enthusiast | Adventurer</p>
+          <p class="mb-4">Driving innovation in cloud virtualization and Linux platforms at Microsoft Azure. Passionate about AI, technology trends, and sharing knowledge through writing and open source contributions.</p>
+          <div class="hero-buttons">
+            <a href="about.html" class="btn btn-primary btn-lg me-3">Learn More</a>
+            <a href="contact.html" class="btn btn-outline-primary btn-lg">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image text-center">
+          <img src="images/about/profile.jpg" alt="Khrum Kashan" class="img-fluid rounded-circle shadow-lg" style="max-width: 400px;">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="blog-single">
+<!-- Features Section -->
+<section class="features-section py-5 bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="images/about/profile.jpg" alt="Khrum Kashan" class="img-fluid rounded">
+      <div class="col-lg-12 text-center mb-5">
+        <h2 class="display-5 fw-bold">What I Do</h2>
+        <p class="lead">Explore my areas of expertise and passion</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-brain fa-3x text-primary"></i>
+            </div>
+            <h5 class="card-title">AI & Technology</h5>
+            <p class="card-text">Exploring the latest trends in artificial intelligence and sharing insights through detailed blog posts.</p>
+            <a href="blogs.html" class="btn btn-outline-primary">Read Blogs</a>
           </div>
-          <div class="col-md-6">
-            <p>I'm an experienced Principal Program Manager with over two decades of expertise in Linux platforms, cloud virtualization, and software quality management. Based in Seattle, I've successfully led initiatives focused on delivering high-quality solutions, particularly within cloud environments such as Microsoft Azure.</p>
-            <p>Throughout my career, I've specialized in program strategy, cross-functional team leadership, and driving technical innovation. I excel at managing complex projects and ensuring rigorous standards in reliability, security, and performance. My strength lies in effectively connecting technical teams and strategic stakeholders, resulting in significant improvements in Linux deployments and virtualization solutions.</p>
-            <p>At Microsoft Azure, I'm actively involved in enhancing Linux platform capabilities, optimizing virtualization technologies, and contributing to the open-source community. My collaborative approach has helped strengthen partnerships with global tech leaders, ISVs, and Linux distributions, significantly improving customer satisfaction and market success.</p>
-            <p>I'm passionate about engineering excellence, innovation, and maintaining high-quality standards. My proactive leadership style and deep technical knowledge have positioned me as a trusted advisor in program management circles. I'm committed to continuously advancing Linux and cloud virtualization technologies, delivering consistent value for customers and stakeholders.</p>
-            <p>My focus areas include:</p>
-            <ul>
-              <li>Program Management</li>
-              <li>AI & Technology Trends</li>
-              <li>Book Summaries</li>
-              <li>Technical Writing</li>
-            </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-book fa-3x text-primary"></i>
+            </div>
+            <h5 class="card-title">Book Summaries</h5>
+            <p class="card-text">Concise summaries of influential books on productivity, leadership, and technology.</p>
+            <a href="books.html" class="btn btn-outline-primary">View Summaries</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body text-center">
+            <div class="feature-icon mb-3">
+              <i class="fa fa-code fa-3x text-primary"></i>
+            </div>
+            <h5 class="card-title">Open Source</h5>
+            <p class="card-text">Contributing to the developer community through open source projects and code repositories.</p>
+            <a href="portfolio.html" class="btn btn-outline-primary">View Projects</a>
           </div>
         </div>
       </div>
@@ -113,150 +145,33 @@
   </div>
 </section>
 
-<!-- AI Blogs Section -->
-<section id="blogs" class="blog-single">
+<!-- Latest Content Section -->
+<section class="latest-content py-5">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <h2 class="text-center mb-5">AI Blogs</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <article class="single-blog">
-              <h3>How AI is Transforming Product Management</h3>
-              <p>Exploring the impact of artificial intelligence on modern product management practices.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </article>
-          </div>
-          <div class="col-md-6">
-            <article class="single-blog">
-              <h3>Building AI-Driven Products</h3>
-              <p>Key considerations and strategies for integrating AI into your product roadmap.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </article>
+      <div class="col-lg-12 text-center mb-5">
+        <h2 class="display-5 fw-bold">Latest Content</h2>
+        <p class="lead">Recent blog posts and book summaries</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">AI Blog</span>
+            <h5 class="card-title">How AI is Transforming Product Management</h5>
+            <p class="card-text">Exploring the impact of artificial intelligence on modern product management practices and the future of product development.</p>
+            <a href="blogs.html" class="btn btn-primary">Read More</a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Book Summaries Section -->
-<section id="books" class="blog-single">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="text-center mb-5">Book Summaries</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Atomic Habits</h5>
-                <p class="card-text">A summary of James Clear's best-selling book on building good habits and breaking bad ones.</p>
-                <a href="#" class="btn btn-primary">Read Summary</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Deep Work</h5>
-                <p class="card-text">Key insights from Cal Newport's guide to focused success in a distracted world.</p>
-                <a href="#" class="btn btn-primary">Read Summary</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">The Lean Startup</h5>
-                <p class="card-text">Highlights from Eric Ries' approach to building successful startups using lean principles.</p>
-                <a href="#" class="btn btn-primary">Read Summary</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Adventures Section -->
-<section id="adventures" class="blog-single">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="text-center mb-5">Adventures</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Mountain Climbing</h5>
-                <p class="card-text">Summited Mount Rainier and explored the Cascades. Always seeking the next peak!</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Skiing</h5>
-                <p class="card-text">Passionate about backcountry skiing and winter adventures in the Pacific Northwest.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Woodworking</h5>
-                <p class="card-text">Enjoy building custom furniture and outdoor gear in my workshop.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GitHub Repos Section -->
-<section id="github" class="blog-single">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="text-center mb-5">GitHub Repositories</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="card">
-              <div class="card-body">
-                <p>Explore my open source projects and code contributions on GitHub:</p>
-                <p><a href="https://github.com/kashan115?tab=repositories" target="_blank">github.com/kashan115</a></p>
-                <div id="github-repo-list">
-                  <ul id="repo-list">
-                    <li>Loading repositories...</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="blog-single">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="text-center mb-5">Contact</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body text-center">
-                <p>Email: <a href="mailto:khrum.kashan@gmail.com">khrum.kashan@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/kkashan/" target="_blank">linkedin.com/in/kkashan</a></p>
-              </div>
-            </div>
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <span class="badge bg-success mb-2">Book Summary</span>
+            <h5 class="card-title">Atomic Habits by James Clear</h5>
+            <p class="card-text">Key insights and practical strategies from James Clear's bestselling book on building good habits and breaking bad ones.</p>
+            <a href="books.html" class="btn btn-primary">Read Summary</a>
           </div>
         </div>
       </div>
@@ -278,25 +193,22 @@
         <div class="footer-nav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#books">Book Summaries</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#blogs">AI Blogs</a>
+              <a class="nav-link" href="blogs.html">AI Blogs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#adventures">Adventures</a>
+              <a class="nav-link" href="books.html">Book Summaries</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#github">GitHub Repos</a>
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
         </div>
@@ -336,25 +248,57 @@
 <!-- Main JS -->
 <script src="js/script.js"></script>
 <script>
+// Set current year in footer
+document.addEventListener('DOMContentLoaded', function() {
+  const copyrightYear = document.getElementById('copyrightYear');
+  if (copyrightYear) {
+    copyrightYear.textContent = new Date().getFullYear();
+  }
+});
+
 // Dynamically fetch and display GitHub repos
-fetch('https://api.github.com/users/kashan115/repos?sort=updated')
-  .then(response => response.json())
-  .then(data => {
+async function loadGitHubRepos() {
+  try {
+    const response = await fetch('https://api.github.com/users/kashan115/repos?sort=updated');
+    const data = await response.json();
     const repoList = document.getElementById('repo-list');
-    repoList.innerHTML = '';
-    data.slice(0, 5).forEach(repo => {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a> - <span>${repo.description || ''}</span>`;
-      repoList.appendChild(li);
-    });
-    if (data.length === 0) {
-      repoList.innerHTML = '<li>No repositories found.</li>';
+    
+    if (repoList) {
+      repoList.innerHTML = '';
+      data.slice(0, 5).forEach(repo => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div>
+              <a href="${repo.html_url}" target="_blank" class="text-decoration-none fw-bold">${repo.name}</a>
+              <p class="mb-0 text-muted small">${repo.description || 'No description'}</p>
+            </div>
+            <div class="text-end">
+              <span class="badge bg-light text-dark me-1">
+                <i class="fa fa-star"></i> ${repo.stargazers_count || 0}
+              </span>
+              ${repo.language ? `<span class="badge bg-primary">${repo.language}</span>` : ''}
+            </div>
+          </div>
+        `;
+        repoList.appendChild(li);
+      });
+      
+      if (data.length === 0) {
+        repoList.innerHTML = '<li class="text-muted">No repositories found.</li>';
+      }
     }
-  })
-  .catch(() => {
+  } catch (error) {
+    console.error('Error loading repositories:', error);
     const repoList = document.getElementById('repo-list');
-    repoList.innerHTML = '<li>Unable to load repositories.</li>';
-  });
+    if (repoList) {
+      repoList.innerHTML = '<li class="text-muted">Unable to load repositories. Please visit <a href="https://github.com/kashan115" target="_blank">GitHub</a> directly.</li>';
+    }
+  }
+}
+
+// Load GitHub repos when page loads
+document.addEventListener('DOMContentLoaded', loadGitHubRepos);
 </script>
 </body>
 </html>

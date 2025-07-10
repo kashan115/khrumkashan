@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Portfolio - Khrum Kashan | Personal Portfolio</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  
+  <!-- Theme Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
+</head>
+
+<body>
+
+<!-- Navbar Start -->
+<nav class="main-nav navbar navbar-expand-lg">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <h2>Khrum Kashan</h2>
+    </a>
+    <!-- Toggle Button -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-list" id="mainNav">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blogs.html">AI Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="books.html">Book Summaries</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <!-- Social Links -->
+      <ul class="main-nav-social">
+        <li>
+          <a href="https://github.com/kashan115" target="_blank"><i class="fa fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/kkashan/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="https://x.com/kashan115" target="_blank"><i class="fa fa-twitter"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Portfolio Header Section -->
+<section class="portfolio-header py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="display-4 fw-bold">Portfolio</h1>
+        <p class="lead">Open source projects, contributions, and professional work</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GitHub Stats Section -->
+<section class="github-stats py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h2>GitHub Activity</h2>
+        <p class="lead">My contributions to the open source community</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="stat-icon mb-3">
+              <i class="fa fa-code fa-2x text-primary"></i>
+            </div>
+            <h3 class="text-primary" id="repoCount">-</h3>
+            <p class="card-text">Public Repositories</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="stat-icon mb-3">
+              <i class="fa fa-star fa-2x text-warning"></i>
+            </div>
+            <h3 class="text-warning" id="starCount">-</h3>
+            <p class="card-text">Total Stars</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="stat-icon mb-3">
+              <i class="fa fa-code-fork fa-2x text-success"></i>
+            </div>
+            <h3 class="text-success" id="forkCount">-</h3>
+            <p class="card-text">Total Forks</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="stat-icon mb-3">
+              <i class="fa fa-users fa-2x text-info"></i>
+            </div>
+            <h3 class="text-info" id="followerCount">-</h3>
+            <p class="card-text">Followers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="featured-projects py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h2>Featured Projects</h2>
+        <p class="lead">Highlighted repositories and contributions</p>
+      </div>
+    </div>
+    <div class="row" id="featuredRepos">
+      <!-- Projects will be dynamically loaded here -->
+    </div>
+  </div>
+</section>
+
+<!-- All Repositories Section -->
+<section class="all-repos py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h2>All Repositories</h2>
+        <p class="lead">Complete list of my public repositories</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th>Repository</th>
+                <th>Description</th>
+                <th>Language</th>
+                <th>Stars</th>
+                <th>Forks</th>
+                <th>Updated</th>
+              </tr>
+            </thead>
+            <tbody id="repoTable">
+              <tr>
+                <td colspan="6" class="text-center">Loading repositories...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Professional Experience Section -->
+<section class="professional-experience py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h2>Professional Highlights</h2>
+        <p class="lead">Key achievements and contributions in my professional career</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="project-icon mb-3">
+              <i class="fa fa-cloud fa-3x text-primary"></i>
+            </div>
+            <h5 class="card-title">Azure Linux Platform</h5>
+            <p class="card-text">Leading initiatives to enhance Linux platform capabilities on Microsoft Azure, improving performance and reliability for enterprise workloads.</p>
+            <div class="project-tags mt-3">
+              <span class="badge bg-primary me-1">Azure</span>
+              <span class="badge bg-primary me-1">Linux</span>
+              <span class="badge bg-primary me-1">Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="project-icon mb-3">
+              <i class="fa fa-cogs fa-3x text-success"></i>
+            </div>
+            <h5 class="card-title">Virtualization Technologies</h5>
+            <p class="card-text">Optimizing virtualization solutions and contributing to open-source projects that improve cloud infrastructure efficiency and security.</p>
+            <div class="project-tags mt-3">
+              <span class="badge bg-success me-1">Virtualization</span>
+              <span class="badge bg-success me-1">Infrastructure</span>
+              <span class="badge bg-success me-1">Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="project-icon mb-3">
+              <i class="fa fa-users fa-3x text-info"></i>
+            </div>
+            <h5 class="card-title">Cross-functional Leadership</h5>
+            <p class="card-text">Managing complex projects across multiple teams, ensuring high standards in reliability, security, and performance while fostering innovation.</p>
+            <div class="project-tags mt-3">
+              <span class="badge bg-info me-1">Leadership</span>
+              <span class="badge bg-info me-1">Project Management</span>
+              <span class="badge bg-info me-1">Innovation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="project-icon mb-3">
+              <i class="fa fa-handshake-o fa-3x text-warning"></i>
+            </div>
+            <h5 class="card-title">Strategic Partnerships</h5>
+            <p class="card-text">Building and strengthening partnerships with global tech leaders, ISVs, and Linux distributions to improve customer satisfaction and market success.</p>
+            <div class="project-tags mt-3">
+              <span class="badge bg-warning me-1">Partnerships</span>
+              <span class="badge bg-warning me-1">Strategy</span>
+              <span class="badge bg-warning me-1">Business Development</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h2>Technical Skills & Expertise</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <h4 class="mb-3">Technologies & Platforms</h4>
+        <div class="skill-tags mb-4">
+          <span class="badge bg-primary me-2 mb-2">Microsoft Azure</span>
+          <span class="badge bg-primary me-2 mb-2">Linux</span>
+          <span class="badge bg-primary me-2 mb-2">Cloud Computing</span>
+          <span class="badge bg-primary me-2 mb-2">Virtualization</span>
+          <span class="badge bg-primary me-2 mb-2">Docker</span>
+          <span class="badge bg-primary me-2 mb-2">Kubernetes</span>
+          <span class="badge bg-primary me-2 mb-2">DevOps</span>
+          <span class="badge bg-primary me-2 mb-2">CI/CD</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h4 class="mb-3">Management & Leadership</h4>
+        <div class="skill-tags mb-4">
+          <span class="badge bg-success me-2 mb-2">Program Management</span>
+          <span class="badge bg-success me-2 mb-2">Cross-functional Teams</span>
+          <span class="badge bg-success me-2 mb-2">Strategic Planning</span>
+          <span class="badge bg-success me-2 mb-2">Quality Assurance</span>
+          <span class="badge bg-success me-2 mb-2">Risk Management</span>
+          <span class="badge bg-success me-2 mb-2">Stakeholder Management</span>
+          <span class="badge bg-success me-2 mb-2">Technical Writing</span>
+          <span class="badge bg-success me-2 mb-2">Open Source</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<section class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <div class="footer-logo">
+          <h3>Khrum Kashan</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="footer-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">AI Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Book Summaries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="sociale-icon">
+          <ul>
+            <li>
+              <a href="https://github.com/kashan115" target="_blank"><i class="fa fa-github"></i></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/kkashan/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://x.com/kashan115" target="_blank"><i class="fa fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copy-right">
+          <p>© <span id="copyrightYear"></span> Khrum Kashan - All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vendor JS -->
+<script src="vendor/jQuery/jquery.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<!-- Main JS -->
+<script src="js/script.js"></script>
+<script>
+// Set current year in footer
+document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
+// GitHub API calls
+async function loadGitHubData() {
+  try {
+    // Fetch user data
+    const userResponse = await fetch('https://api.github.com/users/kashan115');
+    const userData = await userResponse.json();
+    
+    // Fetch repositories
+    const reposResponse = await fetch('https://api.github.com/users/kashan115/repos?sort=updated&per_page=100');
+    const reposData = await reposResponse.json();
+    
+    // Update stats
+    document.getElementById('repoCount').textContent = userData.public_repos || 0;
+    document.getElementById('followerCount').textContent = userData.followers || 0;
+    
+    let totalStars = 0;
+    let totalForks = 0;
+    
+    reposData.forEach(repo => {
+      totalStars += repo.stargazers_count || 0;
+      totalForks += repo.forks_count || 0;
+    });
+    
+    document.getElementById('starCount').textContent = totalStars;
+    document.getElementById('forkCount').textContent = totalForks;
+    
+    // Display featured repositories (top 6 by stars)
+    const featuredRepos = reposData
+      .filter(repo => !repo.fork)
+      .sort((a, b) => (b.stargazers_count || 0) - (a.stargazers_count || 0))
+      .slice(0, 6);
+    
+    const featuredContainer = document.getElementById('featuredRepos');
+    featuredContainer.innerHTML = '';
+    
+    featuredRepos.forEach(repo => {
+      const repoCard = `
+        <div class="col-lg-6 mb-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="${repo.html_url}" target="_blank" class="text-decoration-none">${repo.name}</a>
+              </h5>
+              <p class="card-text">${repo.description || 'No description available'}</p>
+              <div class="repo-stats mb-3">
+                <span class="badge bg-light text-dark me-2">
+                  <i class="fa fa-star"></i> ${repo.stargazers_count || 0}
+                </span>
+                <span class="badge bg-light text-dark me-2">
+                  <i class="fa fa-code-fork"></i> ${repo.forks_count || 0}
+                </span>
+                ${repo.language ? `<span class="badge bg-primary">${repo.language}</span>` : ''}
+              </div>
+              <a href="${repo.html_url}" target="_blank" class="btn btn-outline-primary">View Repository</a>
+            </div>
+          </div>
+        </div>
+      `;
+      featuredContainer.innerHTML += repoCard;
+    });
+    
+    // Display all repositories in table
+    const tableBody = document.getElementById('repoTable');
+    tableBody.innerHTML = '';
+    
+    reposData.forEach(repo => {
+      const row = `
+        <tr>
+          <td>
+            <a href="${repo.html_url}" target="_blank" class="text-decoration-none">
+              ${repo.name}
+            </a>
+          </td>
+          <td>${repo.description || '-'}</td>
+          <td>${repo.language || '-'}</td>
+          <td>${repo.stargazers_count || 0}</td>
+          <td>${repo.forks_count || 0}</td>
+          <td>${new Date(repo.updated_at).toLocaleDateString()}</td>
+        </tr>
+      `;
+      tableBody.innerHTML += row;
+    });
+    
+  } catch (error) {
+    console.error('Error loading GitHub data:', error);
+    // Show error message
+    document.getElementById('repoCount').textContent = 'Error';
+    document.getElementById('starCount').textContent = 'Error';
+    document.getElementById('forkCount').textContent = 'Error';
+    document.getElementById('followerCount').textContent = 'Error';
+    
+    document.getElementById('featuredRepos').innerHTML = `
+      <div class="col-12 text-center">
+        <p class="text-muted">Unable to load GitHub data. Please visit <a href="https://github.com/kashan115" target="_blank">GitHub</a> directly.</p>
+      </div>
+    `;
+    
+    document.getElementById('repoTable').innerHTML = `
+      <tr>
+        <td colspan="6" class="text-center text-muted">
+          Unable to load repositories. Please visit <a href="https://github.com/kashan115" target="_blank">GitHub</a> directly.
+        </td>
+      </tr>
+    `;
+  }
+}
+
+// Load GitHub data when page loads
+document.addEventListener('DOMContentLoaded', loadGitHubData);
+</script>
+</body>
+</html>
