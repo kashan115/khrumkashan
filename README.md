@@ -1,6 +1,6 @@
 # Khrum Kashan - Personal Portfolio Website
 
-A modern, professional portfolio website showcasing my work as a Principal Program Manager at Microsoft Azure, AI enthusiast, and adventurer.
+A modern, professional portfolio website showcasing my work as a Principal Product Manager at Microsoft Azure, AI enthusiast, and adventurer.
 
 ## Features
 
