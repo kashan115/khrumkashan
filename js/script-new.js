@@ -26,32 +26,7 @@ let articles = [
     readTime: "5 min read",
     image: ""
   },
-  {
-    id: 2,
-    title: "Building High-Performance Teams in Tech",
-    subtitle: "Lessons from scaling engineering teams at Microsoft",
-    category: "leadership",
-    tags: ["Leadership", "Team Building", "Microsoft"],
-    excerpt: "Key strategies for building and scaling high-performance engineering teams in fast-paced technology environments.",
-    content: `
-      <p>Building high-performance teams is both an art and a science. During my time at Microsoft, I've learned valuable lessons about what makes teams successful.</p>
-      
-      <h3>Essential Elements of High-Performance Teams</h3>
-      <ul>
-        <li><strong>Clear Vision:</strong> Teams need a shared understanding of goals and objectives</li>
-        <li><strong>Psychological Safety:</strong> Creating an environment where team members feel safe to take risks</li>
-        <li><strong>Diverse Perspectives:</strong> Embracing different viewpoints leads to better solutions</li>
-        <li><strong>Continuous Learning:</strong> Fostering a culture of growth and improvement</li>
-      </ul>
-      
-      <h3>Scaling Challenges and Solutions</h3>
-      <p>As teams grow, maintaining performance becomes increasingly complex. Successful scaling requires deliberate planning and strong leadership.</p>
-    `,
-    author: "Khrum Kashan",
-    date: "2024-12-20",
-    readTime: "7 min read",
-    image: ""
-  },
+
   {
     id: 3,
     title: "The Evolution of Cloud Computing",
