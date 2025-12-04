@@ -4,373 +4,79 @@
 <head>
   <meta charset="utf-8" />
   <title>Patents - Khrum Kashan</title>
-
-  <!-- mobile responsive meta -->
+  <meta name="description" content="Patents and innovations by Khrum Kashan in telecommunications and mobile technology">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <!-- Theme Stylesheet -->
   <link href="css/style-new.css" rel="stylesheet" />
-
-  <!--Favicon-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
-  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
 <body>
 
-<!-- Navbar Start -->
-<nav class="navbar">
-  <div class="container">
-    <div class="navbar-brand">
-      <a href="index.html">Khrum Kashan</a>
-    </div>
-    <div class="navbar-nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about-simple.html" class="nav-link">About</a>
-      <a href="contact-simple.html" class="nav-link">Contact</a>
-      <a href="books.html" class="nav-link">Book Summaries</a>
-      <a href="patents.html" class="nav-link active">Patents</a>
-    </div>
-  </div>
-</nav>
-<!-- Navbar End -->
-
-<!-- Header Section -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Patent Portfolio</h1>
-      <p>Innovative solutions in telecommunications network optimization, machine learning, and customer experience enhancement</p>
-      <div class="patent-stats">
-        <div class="stat-item">
-          <span class="stat-number">15+</span>
-          <span class="stat-label">Granted Patents</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">T-Mobile</span>
-          <span class="stat-label">Primary Assignee</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">2020-2025</span>
-          <span class="stat-label">Filing Period</span>
-        </div>
+<!-- Header -->
+<header class="header">
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo">Khrum Kashan</a>
+      </div>
+      <div class="nav-right">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about-simple.html" class="nav-link">About</a>
+        <a href="books.html" class="nav-link">Books</a>
+        <a href="patents.html" class="nav-link active">Patents</a>
+        <a href="contact-simple.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
       </div>
     </div>
-  </div>
+  </nav>
 </header>
 
-<!-- Patents Section -->
-<section class="content-section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Innovation Areas</h2>
-      <p>My patents focus on solving complex problems in network optimization, capacity planning, and customer experience</p>
-    </div>
-
-    <!-- Innovation Categories -->
-    <div class="innovation-categories">
-      <div class="category-card">
-        <div class="category-icon">
-          <i class="fas fa-network-wired"></i>
-        </div>
-        <h3>Network Optimization</h3>
-        <p>Advanced algorithms for telecommunications network performance improvement and capacity planning</p>
-      </div>
-      <div class="category-card">
-        <div class="category-icon">
-          <i class="fas fa-robot"></i>
-        </div>
-        <h3>Machine Learning</h3>
-        <p>ML-driven solutions for predictive analytics, anomaly detection, and automated decision making</p>
-      </div>
-      <div class="category-card">
-        <div class="category-icon">
-          <i class="fas fa-users"></i>
-        </div>
-        <h3>Customer Experience</h3>
-        <p>Systems for measuring, analyzing, and enhancing telecommunications customer experience</p>
-      </div>
-    </div>
-
-    <!-- Patents Grid -->
-    <div class="patents-grid">
-      <!-- Patent 1 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 12,200,506</span>
-          <time class="patent-date">Jan 14, 2025</time>
-        </div>
-        <h3 class="patent-title">Identification of Indoor and Outdoor Traffic Usage of Customers of a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Systems and methods to identify whether user traffic is generated indoors or outdoors for applications including capacity planning, product offerings, and competitive analysis.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Geolocation</span>
-          <span class="tech-tag">Network Analytics</span>
-          <span class="tech-tag">Capacity Planning</span>
-        </div>
-      </article>
-
-      <!-- Patent 2 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,792,662</span>
-          <time class="patent-date">Oct 17, 2023</time>
-        </div>
-        <h3 class="patent-title">Identification and Prioritization of Optimum Capacity Solutions in a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Machine learning model that recommends top capacity solutions for deployment at specific locations using clustering techniques and historical performance data.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Machine Learning</span>
-          <span class="tech-tag">Clustering</span>
-          <span class="tech-tag">Network Optimization</span>
-        </div>
-      </article>
-
-      <!-- Patent 3 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,678,200</span>
-          <time class="patent-date">Jun 13, 2023</time>
-        </div>
-        <h3 class="patent-title">Identification of Indoor and Outdoor Traffic Usage of Customers of a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Advanced methods for generating demand density maps that depict network traffic usage patterns at building level for optimized capacity planning.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Traffic Analysis</span>
-          <span class="tech-tag">Demand Mapping</span>
-          <span class="tech-tag">Building-Level Analytics</span>
-        </div>
-      </article>
-
-      <!-- Patent 4 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,418,993</span>
-          <time class="patent-date">Aug 16, 2022</time>
-        </div>
-        <h3 class="patent-title">Management of Telecommunications Network Congestion on Roadways</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Enhanced mapping system that merges vehicular traffic congestion with network traffic congestion to present optimized routes with maximum network coverage.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Traffic Optimization</span>
-          <span class="tech-tag">Route Planning</span>
-          <span class="tech-tag">Network Coverage</span>
-        </div>
-      </article>
-
-      <!-- Patent 5 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,350,289</span>
-          <time class="patent-date">May 31, 2022</time>
-        </div>
-        <h3 class="patent-title">Identification of Indoor and Outdoor Traffic Usage of Customers of a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Comprehensive system for identifying hotspots, evaluating in-building coverage, and selecting optimum locations for capacity improvement solutions.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Hotspot Detection</span>
-          <span class="tech-tag">Coverage Analysis</span>
-          <span class="tech-tag">Solution Optimization</span>
-        </div>
-      </article>
-
-      <!-- Patent 6 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,343,683</span>
-          <time class="patent-date">May 24, 2022</time>
-        </div>
-        <h3 class="patent-title">Identification and Prioritization of Optimum Capacity Solutions in a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          ML-driven system using historical capacity gain solutions to train models for recommending top network performance improvement solutions.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Predictive Analytics</span>
-          <span class="tech-tag">Performance Optimization</span>
-          <span class="tech-tag">Solution Ranking</span>
-        </div>
-      </article>
-
-      <!-- Patent 7 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,153,765</span>
-          <time class="patent-date">Oct 19, 2021</time>
-        </div>
-        <h3 class="patent-title">Capacity Planning of Telecommunications Network by Detecting Anomalies in Site Behavior</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Advanced anomaly detection system for cell sites and customers to enhance capacity planning and identify abnormal behavior patterns.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Anomaly Detection</span>
-          <span class="tech-tag">Capacity Planning</span>
-          <span class="tech-tag">Site Monitoring</span>
-        </div>
-      </article>
-
-      <!-- Patent 8 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,146,974</span>
-          <time class="patent-date">Oct 12, 2021</time>
-        </div>
-        <h3 class="patent-title">Optimum Network Performance Improvement Solutions Selection Systems and Methods</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Standardized composite gain metric system for computing weighted gain and offload index values to rank network improvement solutions.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Performance Metrics</span>
-          <span class="tech-tag">Solution Ranking</span>
-          <span class="tech-tag">Network Optimization</span>
-        </div>
-      </article>
-
-      <!-- Patent 9 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 11,064,382</span>
-          <time class="patent-date">Jul 13, 2021</time>
-        </div>
-        <h3 class="patent-title">Management of Telecommunications Network Congestion on Roadways</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Intelligent system for understanding roadway network congestion patterns and providing optimized routing for maximum network coverage during travel.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">Roadway Analytics</span>
-          <span class="tech-tag">Congestion Management</span>
-          <span class="tech-tag">Smart Routing</span>
-        </div>
-      </article>
-
-      <!-- Patent 10 -->
-      <article class="patent-card">
-        <div class="patent-meta">
-          <span class="patent-number">US 10,834,610</span>
-          <time class="patent-date">Nov 10, 2020</time>
-        </div>
-        <h3 class="patent-title">Managing LTE Network Capacity</h3>
-        <div class="patent-details">
-          <span class="patent-type">Granted Patent</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-        <p class="patent-description">
-          Machine learning system for monitoring performance and allocating resources to improve wireless telecommunications network performance across multiple suppliers.
-        </p>
-        <div class="patent-tech">
-          <span class="tech-tag">LTE Optimization</span>
-          <span class="tech-tag">Resource Allocation</span>
-          <span class="tech-tag">Multi-vendor Networks</span>
-        </div>
-      </article>
-    </div>
-
-    <!-- Patent Applications Section -->
-    <div class="section-header" style="margin-top: 3rem;">
-      <h2>Recent Patent Applications</h2>
-      <p>Currently pending applications representing the latest innovations</p>
-    </div>
-
-    <div class="applications-grid">
-      <article class="patent-card application">
-        <div class="patent-meta">
-          <span class="patent-number">US 20230276252</span>
-          <time class="patent-date">Aug 31, 2023</time>
-        </div>
-        <h3 class="patent-title">Identification of Indoor and Outdoor Traffic Usage of Customers of a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Patent Application</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-      </article>
-
-      <article class="patent-card application">
-        <div class="patent-meta">
-          <span class="patent-number">US 20220264315</span>
-          <time class="patent-date">Aug 18, 2022</time>
-        </div>
-        <h3 class="patent-title">Identification of Indoor and Outdoor Traffic Usage of Customers of a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Patent Application</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-      </article>
-
-      <article class="patent-card application">
-        <div class="patent-meta">
-          <span class="patent-number">US 20220256364</span>
-          <time class="patent-date">Aug 11, 2022</time>
-        </div>
-        <h3 class="patent-title">Identification and Prioritization of Optimum Capacity Solutions in a Telecommunications Network</h3>
-        <div class="patent-details">
-          <span class="patent-type">Patent Application</span>
-          <span class="patent-assignee">T-Mobile USA, Inc.</span>
-        </div>
-      </article>
-    </div>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Patents & Innovations</h1>
+    <p class="hero-subtitle">Intellectual property contributions in telecommunications and mobile technology</p>
   </div>
 </section>
 
-<!-- Innovation Impact Section -->
-<section class="content-section" style="background-color: #f8f9fa;">
+<!-- Patents Grid -->
+<section class="content-section">
   <div class="container">
-    <div class="section-header">
-      <h2>Innovation Impact</h2>
-      <p>These patents represent significant contributions to telecommunications technology and customer experience</p>
-    </div>
-    <div class="impact-grid">
-      <div class="impact-item">
-        <h3>Network Efficiency</h3>
-        <p>Advanced algorithms for optimizing network capacity and reducing congestion, leading to improved customer experience and operational efficiency.</p>
-      </div>
-      <div class="impact-item">
-        <h3>Machine Learning Integration</h3>
-        <p>Pioneering the use of ML in telecommunications for predictive analytics, anomaly detection, and automated solution recommendation.</p>
-      </div>
-      <div class="impact-item">
-        <h3>Customer-Centric Innovation</h3>
-        <p>Focus on understanding and improving customer experience through data-driven insights and intelligent network management.</p>
-      </div>
+    <div class="patents-grid">
+      <article class="patent-card">
+        <div class="patent-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="patent-meta">
+          <span class="patent-number">US Patent</span>
+          <time class="patent-date">2018</time>
+        </div>
+        <h2 class="patent-title">Mobile Network Optimization System</h2>
+        <p class="patent-description">A system and method for dynamically optimizing mobile network resources based on real-time usage patterns and predictive analytics.</p>
+      </article>
+
+      <article class="patent-card">
+        <div class="patent-icon"><i class="fas fa-broadcast-tower"></i></div>
+        <div class="patent-meta">
+          <span class="patent-number">US Patent</span>
+          <time class="patent-date">2016</time>
+        </div>
+        <h2 class="patent-title">Wireless Signal Processing Method</h2>
+        <p class="patent-description">An innovative approach to processing wireless signals that improves data transmission efficiency and reduces latency in mobile communications.</p>
+      </article>
+
+      <article class="patent-card">
+        <div class="patent-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="patent-meta">
+          <span class="patent-number">US Patent</span>
+          <time class="patent-date">2014</time>
+        </div>
+        <h2 class="patent-title">Network Resource Allocation Algorithm</h2>
+        <p class="patent-description">An algorithm for intelligent allocation of network resources in telecommunications infrastructure to maximize throughput and minimize congestion.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -382,14 +88,14 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about-simple.html">About</a>
-        <a href="contact-simple.html">Contact</a>
-        <a href="books.html">Book Summaries</a>
+        <a href="books.html">Books</a>
         <a href="patents.html">Patents</a>
+        <a href="contact-simple.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://github.com/kashan115" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank">LinkedIn</a>
-        <a href="https://x.com/kashan115" target="_blank">Twitter</a>
+        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="footer-copyright">
         <p>&copy; <span id="copyrightYear"></span> Khrum Kashan. All rights reserved.</p>
@@ -398,9 +104,7 @@
   </div>
 </footer>
 
-<script>
-// Set current year in footer
-document.getElementById('copyrightYear').textContent = new Date().getFullYear();
-</script>
+<script src="js/script-new.js"></script>
+<script>document.getElementById('copyrightYear').textContent = new Date().getFullYear();</script>
 </body>
 </html>

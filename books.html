@@ -4,46 +4,52 @@
 <head>
   <meta charset="utf-8" />
   <title>Book Summaries - Khrum Kashan</title>
-
-  <!-- mobile responsive meta -->
+  <meta name="description" content="Distilled insights from books on technology, leadership, and personal growth">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- Theme Stylesheet -->
   <link href="css/style-new.css" rel="stylesheet" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
-  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
 <body>
 
-<!-- Navbar Start -->
-<nav class="navbar">
-  <div class="container">
-    <div class="navbar-brand">
-      <a href="index.html">Khrum Kashan</a>
+<!-- Header -->
+<header class="header">
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo">Khrum Kashan</a>
+      </div>
+      <div class="nav-right">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about-simple.html" class="nav-link">About</a>
+        <a href="books.html" class="nav-link active">Books</a>
+        <a href="patents.html" class="nav-link">Patents</a>
+        <a href="contact-simple.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
     </div>
-    <div class="navbar-nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about-simple.html" class="nav-link">About</a>
-      <a href="books.html" class="nav-link active">Books</a>
-      <a href="patents.html" class="nav-link">Patents</a>
-      <a href="contact-simple.html" class="nav-link">Contact</a>
-    </div>
-  </div>
-</nav>
-<!-- Navbar End -->
-
-<!-- Header Section -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Book Summaries</h1>
-      <p>Distilled insights from books that shaped my thinking on technology, leadership, and personal growth</p>
-    </div>
-  </div>
+  </nav>
 </header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Book Summaries</h1>
+    <p class="hero-subtitle">Distilled insights from books that shaped my thinking on technology, leadership, and personal growth</p>
+  </div>
+</section>
 
 <!-- Book Grid Section -->
 <section class="content-section">
@@ -197,7 +203,7 @@
 </section>
 
 <!-- Currently Reading Section -->
-<section class="content-section" style="background-color: #f8f9fa;">
+<section class="content-section" style="background-color: var(--color-bg-secondary);">
   <div class="container">
     <div class="section-header">
       <h2>Currently Reading</h2>
@@ -235,9 +241,15 @@
         <a href="contact-simple.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://github.com/kashan115" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank">LinkedIn</a>
-        <a href="https://x.com/kashan115" target="_blank">Twitter</a>
+        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
       </div>
       <div class="footer-copyright">
         <p>&copy; <span id="copyrightYear"></span> Khrum Kashan. All rights reserved.</p>
@@ -246,8 +258,8 @@
   </div>
 </footer>
 
+<script src="js/script-new.js"></script>
 <script>
-// Set current year in footer
 document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 </script>
 </body>

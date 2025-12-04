@@ -4,10 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <title>Khrum Kashan | Personal Portfolio</title>
-
-  <!-- mobile responsive meta -->
+  <meta name="description" content="Principal Product Manager at Microsoft Azure sharing insights on AI, technology, and product management">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   
   <!-- Theme Stylesheet -->
   <link href="css/style-new.css" rel="stylesheet" />
@@ -20,7 +18,6 @@
 
   <!--Favicon-->
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
-  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
 <body>
@@ -31,16 +28,17 @@
     <div class="nav-container">
       <div class="nav-left">
         <a href="index.html" class="logo">Khrum Kashan</a>
-      </div>        <div class="nav-right">
-          <a href="about-simple.html" class="nav-link">About</a>
-          <a href="index.html" class="nav-link">Articles</a>
-          <a href="books.html" class="nav-link">Books</a>
-          <a href="patents.html" class="nav-link">Patents</a>
-          <a href="contact-simple.html" class="nav-link">Contact</a>
-          <button class="btn-primary" onclick="showAddArticleModal()">
-            <i class="fas fa-plus"></i> Write
-          </button>
-        </div>
+      </div>
+      <div class="nav-right">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about-simple.html" class="nav-link">About</a>
+        <a href="books.html" class="nav-link">Books</a>
+        <a href="patents.html" class="nav-link">Patents</a>
+        <a href="contact-simple.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
     </div>
   </nav>
 </header>
@@ -51,13 +49,13 @@
     <h1 class="hero-title">Welcome to my corner of the internet</h1>
     <p class="hero-subtitle">Principal Product Manager at Microsoft Azure sharing insights on AI, technology, and product management</p>
     <div class="hero-social">
-      <a href="https://github.com/kashan115" target="_blank" class="social-link">
+      <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link">
+      <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="https://x.com/kashan115" target="_blank" class="social-link">
+      <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter">
         <i class="fab fa-twitter"></i>
       </a>
     </div>
@@ -87,90 +85,38 @@
   </div>
 </section>
 
-<!-- Add Article Modal -->
-<div id="addArticleModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3>Write New Article</h3>
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-    </div>
-    <div class="modal-body">
-      <form id="articleForm">
-        <div class="form-group">
-          <label for="articleTitle">Title</label>
-          <input type="text" id="articleTitle" name="title" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="articleSubtitle">Subtitle</label>
-          <input type="text" id="articleSubtitle" name="subtitle">
-        </div>
-        
-        <div class="form-group">
-          <label for="articleCategory">Category</label>
-          <select id="articleCategory" name="category" required>
-            <option value="ai">AI & Machine Learning</option>
-            <option value="product">Product Management</option>
-            <option value="tech">Technology</option>
-            <option value="leadership">Leadership</option>
-            <option value="career">Career</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="articleTags">Tags (comma-separated)</label>
-          <input type="text" id="articleTags" name="tags" placeholder="AI, Product Management, Technology">
-        </div>
-        
-        <div class="form-group">
-          <label for="articleContent">Content</label>
-          <div class="editor-toolbar">
-            <button type="button" onclick="formatText('bold')"><i class="fas fa-bold"></i></button>
-            <button type="button" onclick="formatText('italic')"><i class="fas fa-italic"></i></button>
-            <button type="button" onclick="formatText('underline')"><i class="fas fa-underline"></i></button>
-            <button type="button" onclick="insertList()"><i class="fas fa-list"></i></button>
-            <button type="button" onclick="insertLink()"><i class="fas fa-link"></i></button>
-          </div>
-          <div class="editor" id="articleContent" contenteditable="true" 
-               placeholder="Start writing your article..."></div>
-        </div>
-        
-        <div class="form-group">
-          <label for="articleImage">Featured Image URL (optional)</label>
-          <input type="url" id="articleImage" name="image">
-        </div>
-        
-        <div class="form-actions">
-          <button type="button" class="btn-secondary" onclick="saveDraft()">Save Draft</button>
-          <button type="submit" class="btn-primary">Publish Article</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-left">
-        <p>&copy; 2025 Khrum Kashan. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about-simple.html">About</a>
+        <a href="books.html">Books</a>
+        <a href="patents.html">Patents</a>
+        <a href="contact-simple.html">Contact</a>
       </div>
-      <div class="footer-right">
-        <a href="https://github.com/kashan115" target="_blank" class="social-link">
+      <div class="footer-social">
+        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link">
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://x.com/kashan115" target="_blank" class="social-link">
+        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; <span id="copyrightYear"></span> Khrum Kashan. All rights reserved.</p>
       </div>
     </div>
   </div>
 </footer>
 
 <script src="js/script-new.js"></script>
+<script>
+document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
