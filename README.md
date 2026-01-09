@@ -99,6 +99,5 @@ This project is open source and available under the MIT License.
 
 ## Contact
 
-- Email: khrum.kashan@gmail.com
 - LinkedIn: [linkedin.com/in/kkashan](https://www.linkedin.com/in/kkashan/)
 - GitHub: [github.com/kashan115](https://github.com/kashan115)
