@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Blog Posts - Khrum Kashan</title>
-  <meta name="description" content="Insights and reflections on technology, product management, and leadership">
+  <title>Writing | Khrum Kashan</title>
+  <meta name="description" content="Khrum Kashan writes about AI infrastructure, accelerated compute, Linux, cloud platforms, engineering quality, and technical leadership.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- Theme Stylesheet -->
   <link href="css/style-new.css" rel="stylesheet" />
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
-<body>
+<body class="page-writing">
 
 <!-- Header -->
 <header class="header">
@@ -29,14 +29,17 @@
       <div class="nav-left">
         <a href="index.html" class="logo">Khrum Kashan</a>
       </div>
-      <div class="nav-right">
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-right" id="primary-navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about-simple.html" class="nav-link">About</a>
-        <a href="blogs.html" class="nav-link active">Blog Posts</a>
+        <a href="blogs.html" class="nav-link active">Writing</a>
         <a href="books.html" class="nav-link">Book Summaries</a>
         <a href="patents.html" class="nav-link">Patents</a>
         <a href="contact-simple.html" class="nav-link">Contact</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <button class="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
       </div>
@@ -47,14 +50,30 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
-    <h1 class="hero-title">Blog Posts</h1>
-    <p class="hero-subtitle">Insights and reflections on Linux, open source, and cloud platforms</p>
+    <h1 class="hero-title">Writing on AI infrastructure</h1>
+    <p class="hero-subtitle">Ideas on accelerated compute, Linux, cloud platforms, engineering quality, and technical leadership</p>
   </div>
 </section>
 
 <!-- Blog Posts Section -->
 <section class="content-section">
   <div class="container">
+    <div class="writing-feature">
+      <div class="writing-feature-icon"><i class="fas fa-newspaper"></i></div>
+      <div class="writing-feature-content">
+        <span class="writing-eyebrow">Primary publication</span>
+        <h2>Follow my writing on Substack</h2>
+        <p>Subscribe for new essays and practical perspectives on building reliable AI infrastructure, scaling cloud platforms, and leading complex engineering programs.</p>
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Visit Khrum's Substack <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-header writing-archive-heading">
+      <h2>Selected technical articles</h2>
+      <p>Published work on Linux, open source, and platform quality</p>
+    </div>
     <div class="blog-links-grid">
       
       <article class="blog-link-card">
@@ -64,7 +83,7 @@
         </div>
         <h2 class="blog-link-title">Innovations and Strengthening Platforms Reliability Through Open Source</h2>
         <p class="blog-link-excerpt">Microsoft's open-source contributions for platforms reliability and performance, including Linux kernel improvements, Kexec HandOver for seamless updates, and MANA driver optimizations for AI workloads.</p>
-        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/innovations-and-strengthening-platforms-reliability-through-open-source/4468172" target="_blank" class="btn-secondary">
+        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/innovations-and-strengthening-platforms-reliability-through-open-source/4468172" target="_blank" rel="noopener noreferrer" class="btn-secondary">
           Read Article <i class="fas fa-external-link-alt"></i>
         </a>
       </article>
@@ -76,7 +95,7 @@
         </div>
         <h2 class="blog-link-title">Azure Image Testing for Linux (AITL)</h2>
         <p class="blog-link-excerpt">A self-service validation tool to help developers, ISVs, and Linux distribution partners ensure their images meet Azure's standards. AITL streamlines testing and reduces engineering overhead.</p>
-        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/azure-image-testing-for-linux-aitl/4394719" target="_blank" class="btn-secondary">
+        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/azure-image-testing-for-linux-aitl/4394719" target="_blank" rel="noopener noreferrer" class="btn-secondary">
           Read Article <i class="fas fa-external-link-alt"></i>
         </a>
       </article>
@@ -88,7 +107,7 @@
         </div>
         <h2 class="blog-link-title">Automating the Linux Quality Assurance with LISA on Azure</h2>
         <p class="blog-link-excerpt">LISA (Linux Integration Services Automation) is an open-source framework for automating Linux kernel and VM image validation on Azure, with over 400 test cases covering performance, features, and security.</p>
-        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/automating-the-linux-quality-assurance-with-lisa-on-azure/4303487" target="_blank" class="btn-secondary">
+        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/automating-the-linux-quality-assurance-with-lisa-on-azure/4303487" target="_blank" rel="noopener noreferrer" class="btn-secondary">
           Read Article <i class="fas fa-external-link-alt"></i>
         </a>
       </article>
@@ -100,7 +119,7 @@
         </div>
         <h2 class="blog-link-title">How Microsoft Ensures the Quality of Linux VM Images and Platform Experiences on Azure</h2>
         <p class="blog-link-excerpt">Explore Azure's comprehensive validation strategy for Linux VMs, including upstream kernel validation, Azure-tuned kernel testing, and rigorous image certification processes to ensure reliability and performance.</p>
-        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/how-microsoft-ensures-the-quality-of-linux-vm-images-and-platform-experiences-on/4303513" target="_blank" class="btn-secondary">
+        <a href="https://techcommunity.microsoft.com/blog/linuxandopensourceblog/how-microsoft-ensures-the-quality-of-linux-vm-images-and-platform-experiences-on/4303513" target="_blank" rel="noopener noreferrer" class="btn-secondary">
           Read Article <i class="fas fa-external-link-alt"></i>
         </a>
       </article>
@@ -116,19 +135,22 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about-simple.html">About</a>
-        <a href="blogs.html">Blog Posts</a>
+        <a href="blogs.html">Writing</a>
         <a href="books.html">Book Summaries</a>
         <a href="patents.html">Patents</a>
         <a href="contact-simple.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub">
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Substack">
+          <i class="fas fa-newspaper"></i>
+        </a>
+        <a href="https://github.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter">
+        <a href="https://x.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </div>

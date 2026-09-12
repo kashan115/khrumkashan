@@ -1,116 +1,92 @@
-// =============================================
-// KHRUM KASHAN - Site JavaScript
-// =============================================
-
-// Theme Toggle
-function toggleTheme() {
-  const html = document.documentElement;
-  const currentTheme = html.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  
-  html.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  
-  // Update icon
-  const icon = document.querySelector('.theme-toggle i');
-  if (icon) {
-    icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-  }
-}
-
-// Initialize theme from localStorage
-function initTheme() {
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  
-  const icon = document.querySelector('.theme-toggle i');
-  if (icon) {
-    icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-  }
-}
-
-// Articles data (placeholder)
-const articles = [
-  {
-    id: 1,
-    title: 'Building AI-Powered Products at Scale',
-    excerpt: 'Lessons learned from shipping AI features to millions of users...',
-    category: 'ai',
-    date: 'Jan 10, 2025',
-    image: 'images/article-ai.jpg'
-  },
-  {
-    id: 2,
-    title: 'The Art of Product Discovery',
-    excerpt: 'How to identify and validate opportunities that matter...',
-    category: 'product',
-    date: 'Jan 5, 2025',
-    image: 'images/article-product.jpg'
-  },
-  {
-    id: 3,
-    title: 'Modern Cloud Architecture Patterns',
-    excerpt: 'Patterns for building resilient, scalable systems...',
-    category: 'tech',
-    date: 'Dec 28, 2024',
-    image: 'images/article-tech.jpg'
-  }
-];
-
-// Filter articles
-function filterArticles(category) {
-  const buttons = document.querySelectorAll('.filter-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
-  
-  renderArticles(category === 'all' ? articles : articles.filter(a => a.category === category));
-}
-
-// Render articles
-function renderArticles(articlesToRender) {
-  const grid = document.getElementById('articles-grid');
-  if (!grid) return;
-  
-  grid.innerHTML = articlesToRender.map(article => `
-    <article class="article-card" data-category="${article.category}">
-      <div class="article-content">
-        <div class="article-meta">
-          <span class="article-category">${article.category}</span>
-          <time class="article-date">${article.date}</time>
-        </div>
-        <h3 class="article-title">${article.title}</h3>
-        <p class="article-excerpt">${article.excerpt}</p>
-      </div>
-    </article>
-  `).join('');
-}
-
-// Load more articles
-function loadMoreArticles() {
-  console.log('Loading more articles...');
-}
-
-// Modal functions
-function showAddArticleModal() {
-  const modal = document.getElementById('addArticleModal');
-  if (modal) modal.classList.add('active');
-}
-
-function closeModal() {
-  const modal = document.getElementById('addArticleModal');
-  if (modal) modal.classList.remove('active');
-}
-
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
-  renderArticles(articles);
-  
-  // Close modal on outside click
-  const modal = document.getElementById('addArticleModal');
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-  }
+  initNavigation();
+  initSmoothScroll();
 });
+
+function initTheme() {
+  const toggle = document.querySelector('.theme-toggle');
+  if (!toggle) return;
+
+  const systemPreference = window.matchMedia('(prefers-color-scheme: dark)');
+  const savedTheme = localStorage.getItem('theme');
+  const initialTheme = savedTheme || (systemPreference.matches ? 'dark' : 'light');
+
+  applyTheme(initialTheme, toggle);
+
+  toggle.addEventListener('click', () => {
+    const nextTheme =
+      document.documentElement.getAttribute('data-theme') === 'dark'
+        ? 'light'
+        : 'dark';
+
+    localStorage.setItem('theme', nextTheme);
+    applyTheme(nextTheme, toggle);
+  });
+
+  systemPreference.addEventListener('change', (event) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(event.matches ? 'dark' : 'light', toggle);
+    }
+  });
+}
+
+function applyTheme(theme, toggle) {
+  document.documentElement.setAttribute('data-theme', theme);
+  toggle.innerHTML =
+    theme === 'dark'
+      ? '<i class="fas fa-sun" aria-hidden="true"></i>'
+      : '<i class="fas fa-moon" aria-hidden="true"></i>';
+  toggle.setAttribute(
+    'aria-label',
+    theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+  );
+}
+
+function initNavigation() {
+  const toggle = document.querySelector('.nav-toggle');
+  const navigation = document.querySelector('.nav-right');
+  if (!toggle || !navigation) return;
+
+  const closeNavigation = () => {
+    navigation.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = navigation.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.innerHTML = isOpen
+      ? '<i class="fas fa-times" aria-hidden="true"></i>'
+      : '<i class="fas fa-bars" aria-hidden="true"></i>';
+  });
+
+  navigation.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeNavigation);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeNavigation();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) closeNavigation();
+  });
+}
+
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach((anchor) => {
+    anchor.addEventListener('click', (event) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (!target) return;
+
+      event.preventDefault();
+      const headerOffset = 78;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    });
+  });
+}

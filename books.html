@@ -11,7 +11,7 @@
   <link href="css/style-new.css" rel="stylesheet" />
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
-<body>
+<body class="page-books">
 
 <!-- Header -->
 <header class="header">
@@ -29,14 +29,17 @@
       <div class="nav-left">
         <a href="index.html" class="logo">Khrum Kashan</a>
       </div>
-      <div class="nav-right">
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-right" id="primary-navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about-simple.html" class="nav-link">About</a>
-        <a href="blogs.html" class="nav-link">Blog Posts</a>
+        <a href="blogs.html" class="nav-link">Writing</a>
         <a href="books.html" class="nav-link active">Book Summaries</a>
         <a href="patents.html" class="nav-link">Patents</a>
         <a href="contact-simple.html" class="nav-link">Contact</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <button class="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
       </div>
@@ -215,13 +218,16 @@
         <a href="contact-simple.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub">
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Substack">
+          <i class="fas fa-newspaper"></i>
+        </a>
+        <a href="https://github.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter">
+        <a href="https://x.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </div>

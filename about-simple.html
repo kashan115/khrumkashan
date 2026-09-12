@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>About - Khrum Kashan</title>
-  <meta name="description" content="Learn about Khrum Kashan - Principal Program Manager at Microsoft Azure">
+  <title>About Khrum Kashan | AI Infrastructure Leader</title>
+  <meta name="description" content="Khrum Kashan is an AI infrastructure and technical program leader working across GPU platforms, accelerated compute, Linux, HPC networking, and fleet-scale reliability.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <link href="css/style-new.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
-<body>
+<body class="page-about">
 
 <!-- Header -->
 <header class="header">
@@ -22,14 +22,17 @@
       <div class="nav-left">
         <a href="index.html" class="logo">Khrum Kashan</a>
       </div>
-      <div class="nav-right">
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-right" id="primary-navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about-simple.html" class="nav-link active">About</a>
-        <a href="blogs.html" class="nav-link">Blog Posts</a>
+        <a href="blogs.html" class="nav-link">Writing</a>
         <a href="books.html" class="nav-link">Book Summaries</a>
         <a href="patents.html" class="nav-link">Patents</a>
         <a href="contact-simple.html" class="nav-link">Contact</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <button class="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
       </div>
@@ -43,8 +46,8 @@
     <div class="hero-profile-image">
       <img src="images/KAshan.jpg" alt="Khrum Kashan" class="profile-img">
     </div>
-    <h1 class="hero-title">About Me</h1>
-    <p class="hero-subtitle">Building AI Platforms at Hyperscale</p>
+    <h1 class="hero-title">AI infrastructure, from silicon to fleet</h1>
+    <p class="hero-subtitle">Leading GPU, accelerator, Linux, and HPC platform programs at hyperscale</p>
   </div>
 </section>
 
@@ -52,45 +55,43 @@
 <section class="content-section">
   <div class="container container-narrow">
     <div class="about-content">
-      <h2>Hello, I'm Khrum Kashan.</h2>
-      <p>I am a technology and product leader working at the intersection of hyperscale infrastructure, accelerated compute, and applied artificial intelligence. My career has focused on building the platforms that allow AI systems to operate reliably, efficiently, and at global scale.</p>
-      
-      <p>I currently serve at Microsoft Azure, where I lead platform strategy and execution across Linux-based systems that power large-scale GPU and accelerator fleets. My scope spans silicon enablement, operating system quality, and end-to-end readiness for modern AI workloads training, inference, and emerging agentic systems.</p>
+      <h2>I build the infrastructure that AI depends on.</h2>
+      <p>I am an AI infrastructure and technical program leader with more than two decades of experience bringing complex hardware and software platforms from early definition through production deployment. My work sits at the intersection of accelerated compute, hyperscale cloud systems, Linux, high-performance networking, and the AI workloads they support.</p>
 
-      <h3>Platform Leadership</h3>
-      <p>My work centers on one core responsibility: ensuring that advanced AI models can run predictably on complex, distributed infrastructure.</p>
-      
-      <p>At hyperscale, success is determined less by individual features and more by system behavior under pressure. I lead initiatives that set quality bars across millions of cores, define validation frameworks for new silicon generations, and align hardware, firmware, kernel, and orchestration layers into a coherent platform.</p>
-      
-      <p>This includes deep engagement with GPU and accelerator ecosystems NVIDIA and AMD covering fleet bring-up, performance characterization, and inference optimization with kernels. My teams focus on platform latency, throughput, memory efficiency, and failure modes that only appear at scale.</p>
+      <p>As a Principal Program Manager in Microsoft Azure Compute, I lead cross-functional programs for GPU and AI accelerator platforms. I translate workload and customer requirements into technical plans, align dependencies across hardware and software teams, manage readiness risk, and drive integrated systems through qualification, production sign-off, and fleet adoption.</p>
 
-      <h3>AI Inference, Evaluation, and Agentic Systems</h3>
-      <p>Beyond infrastructure, I work directly with AI workloads. I spend time evaluating large language models, measuring inference behavior, and understanding how system design influences token cost, response time, and reliability.</p>
-      
-      <p>I actively experiment with agentic architectures, retrieval-augmented generation, and workflow-driven AI systems. My interest is not theoretical. I focus on how agents behave in production: how they fail, how they are evaluated, and how platforms must adapt to support long-running, stateful, tool-using AI.</p>
-      
-      <p>This perspective allows me to bridge hardware capability with application reality. I help shape platforms that support not just model execution, but continuous evaluation, iteration, and operational control.</p>
-
-            <h3>Experience Highlights</h3>
-      <ul>
-        <li><strong>Microsoft Azure</strong> - Principal Program Manager, Azure Compute and AI Infrastructure</li>
-        <li><strong>T-Mobile</strong> - Principal Program Manager</li>
-        <li><strong>WindMobile Canada</strong> - Sr Program Manager Lead</li>
-        <li><strong>Nortel Networks</strong> - Software Engineering Lead</li>
-        <li><strong>Siemens</strong> - Systems Engineer</li>
+      <h3>What I Lead</h3>
+      <ul class="leadership-list">
+        <li><strong>AI and accelerated compute:</strong> End-to-end readiness for GPU, custom accelerator, HPC, bare-metal, confidential computing, and ARM64 platforms.</li>
+        <li><strong>Integrated systems:</strong> Alignment across silicon, firmware, virtualization, Linux images, kernels, drivers, networking, storage, and platform validation.</li>
+        <li><strong>High-performance networking:</strong> Linux enablement for MANA, Accelerated Networking, DPDK, InfiniBand, SR-IOV, and the demanding scale characteristics of AI clusters.</li>
+        <li><strong>Quality and reliability:</strong> Validation strategy, production quality gates, telemetry, incident learning, and automation that improve platform readiness and fleet health.</li>
+        <li><strong>Partner and customer leadership:</strong> Technical alignment with engineering organizations, silicon and Linux ecosystem partners, and customers deploying mission-critical workloads.</li>
       </ul>
 
-      <h3>Experience at Scale</h3>
-      <p>Before Microsoft, I held leadership roles at T-Mobile USA, where I managed national capacity planning and multi-billion-dollar infrastructure investments. I led data-driven forecasting initiatives and applied machine learning to real-world network performance problems, improving customer experience at nationwide scale.</p>
-      
-      <p>Across roles, I have worked closely with silicon vendors, cloud engineering teams, open-source communities, and executive leadership. I hold multiple patents in machine learning and network quality, reflecting a long-standing focus on practical innovation.</p>
+      <h3>Building Platforms, Not Just Features</h3>
+      <p>AI infrastructure succeeds only when the full system works together. I focus on the seams between components, where issues in firmware, drivers, kernels, networking, storage, or orchestration can become workload-level failures. That systems view helps teams make better tradeoffs across performance, reliability, operability, and time to market.</p>
 
-      <h3>How I Think</h3>
-      <p>I approach leadership through systems thinking and technical depth. I value clarity, repeatability, and evidence over optimism. Platforms succeed when incentives, tooling, and architecture align and when teams are empowered to reason from first principles.</p>
-      
-      <p>Outside of work, I am a mountaineer and ski instructor. The same habits apply: preparation, respect for constraints, and steady decision-making when conditions change.</p>
-      
-      <p>If you are thinking about the future of AI platforms GPUs, inference, agents, and the infrastructure beneath them I am always interested in the conversation.</p>
+      <p>I have built platform-quality programs and validation services from the ground up, led Linux and driver readiness for new compute generations, and developed AI-assisted approaches to test selection, failure triage, and release decisions. The goal is consistent: turn complex integration work into a repeatable engineering system that can scale.</p>
+
+      <h3>From Infrastructure to AI Workloads</h3>
+      <p>I also work hands-on with modern AI systems, including large language model inference, serving frameworks, performance benchmarking, quantization, and agentic workflows. Understanding prefill, decode, concurrency, memory behavior, and failure modes connects infrastructure decisions to the outcomes that matter for AI developers and customers.</p>
+
+      <h3>Career Perspective</h3>
+      <p>Before my current role, I led Linux kernel productization and infrastructure programs across Azure and partner platforms. Earlier at T-Mobile, I directed national capacity and network evolution programs and applied predictive machine learning to large-scale infrastructure planning. I am also an inventor on more than ten patents spanning machine learning, network quality, and infrastructure intelligence.</p>
+
+      <h3>How I Lead</h3>
+      <p>I connect the technical and business worlds: defining the product outcome, making system dependencies visible, creating clear decision points, and keeping teams focused on measurable customer impact. I value technical depth, evidence, direct communication, and durable mechanisms over one-time heroics.</p>
+
+      <p>Outside of work, I am a mountaineer and ski instructor. Both reinforce the same leadership habits I rely on in technology: preparation, respect for constraints, and calm decision-making when conditions change.</p>
+
+      <div class="about-cta">
+        <h3>Writing and Ideas</h3>
+        <p>I write about AI infrastructure, Linux, cloud platforms, engineering quality, and leadership on Substack.</p>
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Read on Substack <i class="fas fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -102,15 +103,16 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about-simple.html">About</a>
-        <a href="blogs.html">Blog Posts</a>
+        <a href="blogs.html">Writing</a>
         <a href="books.html">Book Summaries</a>
         <a href="patents.html">Patents</a>
         <a href="contact-simple.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Substack"><i class="fas fa-newspaper"></i></a>
+        <a href="https://github.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="footer-copyright">
         <p>&copy; <span id="copyrightYear"></span> Khrum Kashan. All rights reserved.</p>

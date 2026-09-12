@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8" />
   <title>Contact - Khrum Kashan</title>
-  <meta name="description" content="Get in touch with Khrum Kashan">
+  <meta name="description" content="Connect with Khrum Kashan about AI infrastructure, accelerated compute, Linux, cloud platforms, and technical leadership.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <link href="css/style-new.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
-<body>
+<body class="page-contact">
 
 <!-- Header -->
 <header class="header">
@@ -22,14 +22,17 @@
       <div class="nav-left">
         <a href="index.html" class="logo">Khrum Kashan</a>
       </div>
-      <div class="nav-right">
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-right" id="primary-navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about-simple.html" class="nav-link">About</a>
-        <a href="blogs.html" class="nav-link">Blog Posts</a>
+        <a href="blogs.html" class="nav-link">Writing</a>
         <a href="books.html" class="nav-link">Book Summaries</a>
         <a href="patents.html" class="nav-link">Patents</a>
         <a href="contact-simple.html" class="nav-link active">Contact</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <button class="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
       </div>
@@ -41,7 +44,7 @@
 <section class="hero">
   <div class="hero-content">
     <h1 class="hero-title">Get in Touch</h1>
-    <p class="hero-subtitle">I'd love to hear from you. Feel free to reach out!</p>
+    <p class="hero-subtitle">Connect for conversations on AI infrastructure, accelerated compute, Linux, and platform leadership</p>
   </div>
 </section>
 
@@ -50,18 +53,22 @@
   <div class="container container-narrow">
     <div class="contact-info">
       <h2>Let's Connect</h2>
-      <p>Whether you want to discuss technology, product management, or potential collaborations, I'm always open to connecting with like-minded professionals.</p>
+      <p>For professional conversations, speaking opportunities, and collaboration around AI infrastructure or cloud platforms, connect with me through one of the channels below.</p>
       
       <div class="contact-methods">
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="contact-method">
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="contact-method">
+          <i class="fas fa-newspaper"></i>
+          <span>Read and subscribe on Substack</span>
+        </a>
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" rel="noopener noreferrer" class="contact-method">
           <i class="fab fa-linkedin"></i>
           <span>LinkedIn</span>
         </a>
-        <a href="https://github.com/kashan115" target="_blank" class="contact-method">
+        <a href="https://github.com/kashan115" target="_blank" rel="noopener noreferrer" class="contact-method">
           <i class="fab fa-github"></i>
           <span>GitHub</span>
         </a>
-        <a href="https://x.com/kashan115" target="_blank" class="contact-method">
+        <a href="https://x.com/kashan115" target="_blank" rel="noopener noreferrer" class="contact-method">
           <i class="fab fa-twitter"></i>
           <span>Twitter</span>
         </a>
@@ -77,15 +84,16 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about-simple.html">About</a>
-        <a href="blogs.html">Blog Posts</a>
+        <a href="blogs.html">Writing</a>
         <a href="books.html">Book Summaries</a>
         <a href="patents.html">Patents</a>
         <a href="contact-simple.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Substack"><i class="fas fa-newspaper"></i></a>
+        <a href="https://github.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="footer-copyright">
         <p>&copy; <span id="copyrightYear"></span> Khrum Kashan. All rights reserved.</p>
