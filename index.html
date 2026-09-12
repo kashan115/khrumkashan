@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Khrum Kashan | Personal Portfolio</title>
-  <meta name="description" content="Principal Program Manager at Microsoft Azure sharing insights on AI, technology, and product management">
+  <title>Khrum Kashan | AI Infrastructure Leader</title>
+  <meta name="description" content="AI infrastructure leader in Azure Compute, bringing GPU and accelerated computing platforms from silicon enablement to production readiness at hyperscale.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   <!-- Theme Stylesheet -->
   <link href="css/style-new.css" rel="stylesheet" />
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,7 +20,7 @@
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
 </head>
 
-<body>
+<body class="page-home">
 
 <!-- Header -->
 <header class="header">
@@ -29,14 +29,17 @@
       <div class="nav-left">
         <a href="index.html" class="logo">Khrum Kashan</a>
       </div>
-      <div class="nav-right">
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-right" id="primary-navigation">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="about-simple.html" class="nav-link">About</a>
-        <a href="blogs.html" class="nav-link">Blog Posts</a>
+        <a href="blogs.html" class="nav-link">Writing</a>
         <a href="books.html" class="nav-link">Book Summaries</a>
         <a href="patents.html" class="nav-link">Patents</a>
         <a href="contact-simple.html" class="nav-link">Contact</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <button class="theme-toggle" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
       </div>
@@ -44,27 +47,110 @@
   </nav>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-profile-image">
-      <img src="images/KAshan.jpg" alt="Khrum Kashan" class="profile-img">
+<main>
+  <section class="home-hero">
+    <div class="container home-hero-grid">
+      <div class="home-hero-copy">
+        <span class="system-label">Profile / AI Infrastructure</span>
+        <h1>Infrastructure for <em>intelligence</em> at scale.</h1>
+        <p class="home-deck">I lead the programs that turn accelerators, Linux, high-performance networking, and fleet engineering into production AI platforms.</p>
+        <div class="hero-actions">
+          <a href="about-simple.html" class="btn-primary">Read my profile <i class="fas fa-arrow-right"></i></a>
+          <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="btn-text">Field notes on Substack <i class="fas fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+      <aside class="profile-module" aria-label="Professional profile">
+        <div class="portrait-frame">
+          <img src="images/KAshan.jpg" alt="Khrum Kashan">
+          <span class="portrait-code">KK / 001</span>
+        </div>
+        <dl class="profile-readout">
+          <div><dt>Role</dt><dd>AI Infrastructure &amp; Technical Program Leader</dd></div>
+          <div><dt>Platform</dt><dd>Microsoft Azure Compute</dd></div>
+          <div><dt>Focus</dt><dd>GPU / Linux / HPC / Reliability</dd></div>
+        </dl>
+        <div class="profile-links">
+          <a href="https://www.linkedin.com/in/kkashan/" target="_blank" rel="noopener noreferrer">LinkedIn <span>&nearr;</span></a>
+          <a href="https://github.com/kashan115" target="_blank" rel="noopener noreferrer">GitHub <span>&nearr;</span></a>
+          <a href="https://x.com/kashan115" target="_blank" rel="noopener noreferrer">X <span>&nearr;</span></a>
+        </div>
+      </aside>
     </div>
-    <h1 class="hero-title">Welcome to my corner of the internet</h1>
-    <p class="hero-subtitle">Principal Program Manager at Microsoft Azure sharing insights on AI, technology, and product management</p>
-    <div class="hero-social">
-      <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
+    <div class="container hero-index">
+      <span>Silicon to fleet</span>
+      <span>20+ years in critical infrastructure</span>
+      <span>10+ patents</span>
+    </div>
+  </section>
+
+  <section class="stack-section">
+    <div class="container">
+      <div class="section-intro">
+        <span class="section-number">01</span>
+        <div>
+          <span class="system-label">The infrastructure stack</span>
+          <h2>AI performance is a system property.</h2>
+        </div>
+        <p>Reliable AI platforms emerge when every layer is designed, qualified, and operated as one system.</p>
+      </div>
+      <div class="system-map">
+        <article class="stack-node">
+          <span>01 / Silicon</span>
+          <h3>Accelerators</h3>
+          <p>GPU, custom silicon, and server platforms</p>
+        </article>
+        <article class="stack-node">
+          <span>02 / Systems</span>
+          <h3>Fabric</h3>
+          <p>HPC networking, storage, and virtualization</p>
+        </article>
+        <article class="stack-node">
+          <span>03 / Software</span>
+          <h3>Linux</h3>
+          <p>Images, kernels, drivers, and frameworks</p>
+        </article>
+        <article class="stack-node">
+          <span>04 / Operations</span>
+          <h3>Fleet</h3>
+          <p>Validation, reliability, and production learning</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="leadership-section">
+    <div class="container leadership-layout">
+      <span class="section-number">02</span>
+      <div class="leadership-copy">
+        <span class="system-label">How I lead</span>
+        <h2>Make the whole system ready.</h2>
+        <p>I translate workload and customer requirements into technical plans, expose cross-stack dependencies early, and create the mechanisms that carry complex infrastructure from definition to fleet adoption.</p>
+        <a href="about-simple.html" class="btn-text">Experience and operating philosophy <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <ol class="operating-model">
+        <li><span>Define</span><p>Product outcome, architecture, requirements, and decision points</p></li>
+        <li><span>Integrate</span><p>Hardware, firmware, Linux, networking, storage, and validation</p></li>
+        <li><span>Qualify</span><p>Performance, reliability, risk, and production readiness</p></li>
+        <li><span>Learn</span><p>Fleet telemetry, incident signals, and durable engineering improvements</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="writing-section">
+    <div class="container writing-band">
+      <span class="section-number">03</span>
+      <div>
+        <span class="system-label">Field notes</span>
+        <h2>Writing from inside the infrastructure stack.</h2>
+        <p>AI systems, Linux, cloud platforms, engineering quality, and the work of leading at scale.</p>
+      </div>
+      <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="writing-arrow" aria-label="Read Khrum Kashan on Substack">
+        <span>Read on Substack</span><i class="fas fa-arrow-up-right-from-square"></i>
       </a>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- Footer -->
 <footer class="footer">
@@ -73,19 +159,22 @@
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about-simple.html">About</a>
-        <a href="blogs.html">Blog Posts</a>
+        <a href="blogs.html">Writing</a>
         <a href="books.html">Book Summaries</a>
         <a href="patents.html">Patents</a>
         <a href="contact-simple.html">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://github.com/kashan115" target="_blank" class="social-link" aria-label="GitHub">
+        <a href="https://substack.com/@kkashan" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Substack">
+          <i class="fas fa-newspaper"></i>
+        </a>
+        <a href="https://github.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" class="social-link" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/kkashan/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://x.com/kashan115" target="_blank" class="social-link" aria-label="Twitter">
+        <a href="https://x.com/kashan115" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
